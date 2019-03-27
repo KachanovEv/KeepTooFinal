@@ -22,29 +22,45 @@
         android:layout_height="match_parent"
         android:scrollbars="none" />
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottom_app_bar"
+
+
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_gravity="bottom"
-            app:backgroundTint="@color/colorPrimary"
-            app:fabAlignmentMode="center"
-            app:fabAttached="true"
-            app:navigationIcon="@drawable/Group1964bottom"/>
+            app:elevation="0dp"
+            app:itemIconTint="@drawable/menu_item_selector"
+            app:itemTextColor="@drawable/menu_item_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/navigation_items" />
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/Group1976bar"
-            app:layout_anchor="@id/bottom_app_bar" />
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:focusable="true"
+            app:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@id/navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/Groupbottom" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

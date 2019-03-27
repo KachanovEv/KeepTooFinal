@@ -7,4 +7,5 @@
     <string name="tododo">TODO</string>
     <string name="totmask">TODO</string>
     <string name="articles">Articles</string>
+    <string name="filter">filter</string>
 </resources>
