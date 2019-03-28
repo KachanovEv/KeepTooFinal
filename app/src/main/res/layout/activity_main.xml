@@ -12,12 +12,13 @@
 
         android:id="@+id/my_recycler_view"
         android:layout_width="0dp"
-        android:layout_height="593dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
         app:layout_constraintVertical_bias="0.71" />
 
 
@@ -46,18 +47,23 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="116dp"
-        android:layout_height="18dp"
+
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/style_textview"
+        android:gravity="center"
         android:text="@string/recent_media"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorText"
         android:textSize="13sp"
-        android:gravity="center"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintBottom_toTopOf="@+id/my_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.keeptoofinal.CurvedBottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -67,7 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setWallpaper" >
+        app:layout_constraintTop_toBottomOf="@+id/setWallpaper">
 
     </com.example.keeptoofinal.CurvedBottomNavigationView>
 
@@ -78,12 +84,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="635dp"
         android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        android:focusable="true" />
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 
 </android.support.constraint.ConstraintLayout>
