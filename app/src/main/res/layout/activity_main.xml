@@ -12,11 +12,13 @@
 
         android:id="@+id/my_recycler_view"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="593dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
 
 
     <FrameLayout
@@ -38,7 +40,22 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
+
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="171dp"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/style_textview"
+        android:text="Recent media"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorText"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="58dp" />
 
     <com.example.keeptoofinal.CurvedBottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -48,28 +65,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setWallpaper"
-
-
-        >
+        app:layout_constraintTop_toBottomOf="@+id/setWallpaper" >
 
     </com.example.keeptoofinal.CurvedBottomNavigationView>
 
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/setWallpaper"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="635dp"
-        android:lauout_gravity="end"
-        android:src="@drawable/groupbottom"
-        app:fabSize="normal"
-
-        app:layout_anchor="@id/bottomNavigation"
+        android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 
 </android.support.constraint.ConstraintLayout>
