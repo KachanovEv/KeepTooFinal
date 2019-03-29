@@ -2,8 +2,9 @@ package com.example.keeptoofinal
 
 import android.content.Context
 import android.graphics.*
-import android.support.design.widget.BottomNavigationView
+
 import android.util.AttributeSet
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CurvedBottomNavigationView @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
