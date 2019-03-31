@@ -6,31 +6,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.keeptoofinal.R;
 import com.example.keeptoofinal.model.Data;
+
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private Data[] itemsData;
+    private ArrayList<Data> itemsData;
 
-    public RecyclerViewAdapter(Data[] itemsData) {
+    public RecyclerViewAdapter(ArrayList<Data> itemsData) {
         this.itemsData = itemsData;
     }
 
+
+    @NotNull
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                              int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.layout_item, null);
 
-        ViewHolder viewHolder = new ViewHolder(itemLayoutView);
-        return viewHolder;
+        return new ViewHolder(itemLayoutView);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NotNull ViewHolder viewHolder, int position) {
 
 
     }
@@ -40,7 +45,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView textView1;
         public ImageView media_image;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
 
         }
@@ -49,6 +54,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return itemsData.length;
+        return itemsData.size();
     }
 }
