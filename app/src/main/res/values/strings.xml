@@ -8,4 +8,6 @@
     <string name="articles">Articles</string>
     <string name="filter">filter</string>
     <string name="recent_media">Recent media</string>
+    <string name="todoimage">TODO</string>
+
 </resources>
