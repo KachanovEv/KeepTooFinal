@@ -1,4 +1,4 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/CardView.Light"
     android:layout_width="158dp"
     android:layout_height="wrap_content">
@@ -9,23 +9,4 @@
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@drawable/mask1" />
-    <ImageView
-        android:id="@+id/media_image2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/mask" />
-    <ImageView
-        android:id="@+id/media_image3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/maskcopy2" />
-    <ImageView
-        android:id="@+id/media_image4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/maskcopy" />
-
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

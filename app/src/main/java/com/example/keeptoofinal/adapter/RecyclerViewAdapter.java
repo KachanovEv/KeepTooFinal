@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.keeptoofinal.R;
 import com.example.keeptoofinal.model.Data;
-
 
 import org.jetbrains.annotations.NotNull;
 
@@ -26,28 +26,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @NotNull
     @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(@NotNull ViewGroup parent,
                                                              int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.layout_item, null);
+                .inflate(R.layout.layout_item, parent, false);
 
         return new ViewHolder(itemLayoutView);
     }
 
     @Override
     public void onBindViewHolder(@NotNull ViewHolder viewHolder, int position) {
-
-
+//        Glide.with(this.context).load(itemsData.get(position).imageId).into(viewHolder.media_image);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView1;
-        public ImageView media_image;
+        ImageView media_image;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-
+            media_image = itemLayoutView.findViewById(R.id.media_image);
         }
     }
 
