@@ -5,9 +5,12 @@
 
     <string name="tododo">TODO</string>
     <string name="totmask">TODO</string>
-    <string name="articles">Articles</string>
+    <string name="Safe">Safe</string>
+    <string name="Setting">setting</string>
     <string name="filter">filter</string>
     <string name="recent_media">Recent media</string>
     <string name="todoimage">TODO</string>
+    <string name="Temp">Temp</string>
+    <string name="Clean">Clean</string>
 
 </resources>

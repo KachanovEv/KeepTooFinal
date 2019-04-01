@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_temp"
+        android:icon="@drawable/timehourglass512"
+        android:title="@string/Temp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/navigation_safe"
+        android:icon="@drawable/path133"
+        android:title="@string/Safe"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/navigation_clean"
+        android:icon="@drawable/clean"
+        android:title="@string/Clean"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting"
+        android:title="@string/Setting"
+        app:showAsAction="always" />
+
+
+
+
+</menu>

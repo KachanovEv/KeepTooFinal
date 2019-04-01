@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_favorites:
+            case 1:
                 tet(6);
                 // find the correct path using name
                 mlinId.setX(mView.mFirstCurveControlPoint1.x );
