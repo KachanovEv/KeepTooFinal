@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import com.example.keeptoofinal.adapter.RecyclerViewAdapter;
 import com.example.keeptoofinal.model.Data;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.sdsmdg.harjot.vectormaster.VectorMasterView;
 import com.sdsmdg.harjot.vectormaster.models.PathModel;
@@ -48,28 +49,25 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mlinId = findViewById(R.id.lin_id);
 
 
-        //getting bottom navigation view and attaching the listener
-        //BottomNavigationView navigation = findViewById(R.id.customBottomBar);
-
 
 
         //recyclerView = findViewById(R.id.recyclerViewImages);
         recyclerView.setHasFixedSize(true);
-        ArrayList<Data> Data= new ArrayList<>();
+        ArrayList<Data> data= new ArrayList<>();
 
-        Data.add(new Data( R.drawable.mask1 ));
-        Data.add(new Data( R.drawable.mask ));
-        Data.add(new Data( R.drawable.maskcopy2 ));
-        Data.add(new Data( R.drawable.maskcopy ));
+        data.add(new Data( R.drawable.mask1 ));
+        data.add(new Data( R.drawable.mask ));
+        data.add(new Data( R.drawable.maskcopy2 ));
+        data.add(new Data( R.drawable.maskcopy ));
 
 
 
         RecyclerViewAdapter adapter;
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
-        adapter = new RecyclerViewAdapter(Data);
+        adapter = new RecyclerViewAdapter();
         recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        adapter.setData(data);
 
 
     }
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_favorites:
+            case 1:
                 tet(6);
                 // find the correct path using name
                 mlinId.setX(mView.mFirstCurveControlPoint1.x );

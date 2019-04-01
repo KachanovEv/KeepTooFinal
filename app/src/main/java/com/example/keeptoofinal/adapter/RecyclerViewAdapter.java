@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.example.keeptoofinal.R;
 import com.example.keeptoofinal.model.Data;
 
@@ -19,7 +17,15 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private ArrayList<Data> itemsData;
 
-    public RecyclerViewAdapter(ArrayList<Data> itemsData) {
+    public void setData(ArrayList<Data> itemsData) {
+        this.itemsData = itemsData;
+        notifyDataSetChanged();
+
+
+    }
+
+
+    public RecyclerViewAdapter() {
         this.itemsData = itemsData;
     }
 
@@ -38,6 +44,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NotNull ViewHolder viewHolder, int position) {
 //        Glide.with(this.context).load(itemsData.get(position).imageId).into(viewHolder.media_image);
     }
+
+
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
