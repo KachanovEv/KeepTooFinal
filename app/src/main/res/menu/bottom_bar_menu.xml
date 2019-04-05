@@ -4,14 +4,16 @@
 
     <item
         android:id="@+id/navigation_temp"
-        android:icon="@drawable/setting"
-        android:title="test"
-        app:showAsAction="always" />
+        android:enabled="true"
+        android:icon="@drawable/timehourglass512"
+        android:title="@string/temp"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigation_safe"
+        android:enabled="true"
         android:icon="@drawable/setting"
-        android:title="test"
-        app:showAsAction="always" />
+        android:title="@string/safe"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/navigation_empty"
         android:icon="@drawable/ic_menu_transparent"
@@ -21,12 +23,14 @@
     <item
         android:id="@+id/navigation_clean"
         android:icon="@drawable/setting"
-        android:title="test"
-        app:showAsAction="always" />
+        android:title="@string/clean"
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/navigation_setting"
         android:icon="@drawable/setting"
-        android:title="test"
-        app:showAsAction="always" />
+        android:title="@string/Setting"
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
 </menu>

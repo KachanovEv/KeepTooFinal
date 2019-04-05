@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:background="@android:color/darker_gray"
-    tools:context=".ScrollingActivity">
+    tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:context=".ScrollingActivity"
-            tools:showIn="@layout/activity_scrolling" />
+            tools:showIn="@layout/activity_main" />
 
         <TextView
             android:id="@+id/tv_recent_media_main"
@@ -74,13 +74,19 @@
         app:itemTextColor="#443A3A"
         app:menu="@menu/bottom_bar_menu" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/stat_notify_error"
+
+
+        android:background="@drawable/symbol6117"
+
         app:layout_anchor="@id/bottom_app_bar"
         app:layout_anchorGravity="center_horizontal"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:useCompatPadding="true" />
+        app:useCompatPadding="true"
+        android:contentDescription="@string/todoimage" />
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
